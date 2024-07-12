@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
-// class based component 
-class Moviecard extends React.Component{
+
+function Moviecard(props) {
 
     // now no need of  this code because we moved all the add start, minus stars code in movie list using props
 
@@ -60,12 +60,12 @@ class Moviecard extends React.Component{
 
 
 
-    render(){
+    
 
         //Destructing the state object in render function
-        const {movies, onIncStars, onClickFav, onClickAddtocart, onDecStars} = this.props
-        const {title, plot, poster, price, rating, stars, fav,addToCart} =  this.props.movies;
-        console.log(this.props.movies)
+        const {movies, onIncStars, onClickFav, onClickAddtocart, onDecStars} = props;
+        const {title, plot, poster, price, rating, stars, fav,addToCart} =  props.movies;
+        console.log(props.movies)
 
         return (
 
@@ -119,7 +119,6 @@ class Moviecard extends React.Component{
             </div>
         )
     }
-}
 export default Moviecard;
 
 

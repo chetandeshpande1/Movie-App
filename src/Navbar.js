@@ -6,9 +6,9 @@ import "./styles.css"
 // import styled from "styled-components"; // how to use styled components refer 10/07/2024 push
 
 
-class Navbar extends React.Component {
-    render(){
-        const {cartCount} = this.props
+function Navbar(props) {
+    
+    const {cartCount} = props
         return(
         <>
             <div className={styles.nav}>
@@ -20,7 +20,6 @@ class Navbar extends React.Component {
             </div>
         </>
         )
-    }
 }
 
 export default Navbar;
